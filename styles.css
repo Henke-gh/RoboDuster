@@ -1,0 +1,188 @@
+:root {
+  --nightmare: rgb(34, 32, 30);
+  --static-white: rgb(227, 221, 215);
+  --bluepowder: rgb(120, 167, 203);
+  --bluepowder-dark: rgb(102, 140, 170);
+  --techno-pink: rgb(255, 91, 173);
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  color: var(--bluepowder);
+  background-color: var(--nightmare);
+}
+
+button {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+  color: var(--nightmare);
+  background-color: var(--bluepowder);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border: none;
+}
+
+button:hover {
+  color: var(--static-white);
+  background-color: var(--bluepowder-dark);
+}
+
+#combatLog button {
+  margin: 0.5rem;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.header {
+  border: 2px solid var(--bluepowder);
+  text-align: center;
+  width: fit-content;
+  padding: 0 2rem;
+}
+
+.headerSubLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.creationContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-bottom: 3px dashed var(--bluepowder);
+}
+
+.current {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.current p {
+  margin: 0;
+}
+
+.selection {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.parts {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.currentStats {
+  width: 200px;
+  text-align: start;
+  gap: 0;
+}
+
+.setName {
+  padding: 1rem;
+  font-weight: bold;
+}
+
+#playerName {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--static-white);
+  background-color: var(--nightmare);
+  padding: 0.5rem;
+  box-shadow: none;
+  border: 1px solid var(--bluepowder);
+}
+
+#createBot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+#combatZone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#combatLog {
+  padding: 2rem;
+}
+
+#combatLog p {
+  margin: 0.2rem 0rem;
+}
+
+.block {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: var(--bluepowder);
+  animation-name: slider;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+@keyframes slider {
+  0% {
+    transform: scale(100%);
+  }
+  50% {
+    transform: scale(150%);
+  }
+  100% {
+    transform: scale(100%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .parts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .currentStats {
+    grid-column: 1 / -1;
+  }
+}

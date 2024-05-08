@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/blob.gif" />
+    <title>RoboDuster</title>
+  </head>
+  <body>
+    <button id="audioController">Sound is Off</button>
+    <header>
+      <div class="header">
+        <h1>[ RoboDuster ]</h1>
+        <div class="headerSubLine">
+          <p>Bite the rust..</p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="createBot">
+        <h2>Assemble Contestant</h2>
+        <p id="credits">Credits: 0</p>
+        <div class="creationContainer">
+          <h3>[Select Parts]</h3>
+          <div class="parts">
+            <div class="category" id="weapons"><h4>Weapons</h4></div>
+            <div class="category" id="armor"><h4>Armor Plating</h4></div>
+            <div class="category currentStats">
+              <h4>Current Stats</h4>
+              <p id="playerArmor">Armor:</p>
+              <p id="playerHP">Hit Points:</p>
+              <p id="playerWeapon">Weapon:</p>
+              <p id="playerDmg">Damage:</p>
+            </div>
+          </div>
+          <div class="setName">
+            <label for="playerName">Brand your robot:</label>
+            <input type="text" maxlength="20" id="playerName" />
+          </div>
+        </div>
+        <button id="continue">Create</button>
+      </div>
+
+      <div id="combatZone">
+        <img src="./images/blob.gif" alt="black-robot" />
+        <p id="winRatio">[ Wins: 0 ] - [ Losses: 0 ]</p>
+        <h2 id="versus"></h2>
+        <button id="fight">Fight</button>
+        <section id="combatLog">
+          <div class="block"></div>
+        </section>
+      </div>
+    </main>
+    <footer><p>Robot Things - 2024</p></footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
