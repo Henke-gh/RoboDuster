@@ -40,6 +40,8 @@ const previewWeapon = document.getElementById("playerWeapon");
 const previewArmor = document.getElementById("playerArmor");
 const previewDmg = document.getElementById("playerDmg");
 const viewCredits = document.getElementById("credits");
+const lastRobotName = document.getElementById("lastRobotName");
+const lastScore = document.getElementById("lastScore");
 
 const versus = document.getElementById("versus");
 const combatLog = document.getElementById("combatLog");
@@ -122,6 +124,12 @@ nextRoundBtn.addEventListener("click", () => {
 const clearLogBtn = document.createElement("button");
 clearLogBtn.textContent = "Rebuild Bot";
 clearLogBtn.addEventListener("click", () => {
+    if (player.name) {
+    lastRobotName.textContent = `Last Contestant: ${player.name}`;
+    lastScore.textContent = `Final Score: ${player.credits}`;
+    lastRobotName.style.display = "block";
+    lastScore.style.display = "block";
+  }
   round = 1;
   player.maxHp = 100;
   viewCredits.innerHTML = `Credits: ${player.credits}`;
